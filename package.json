@@ -1,0 +1,17 @@
+{
+  "name": "notebook-next",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "serve": "vitepress serve docs",
+    "build": "vitepress build docs"
+  },
+  "version": "1.0.0",
+  "description": "notebook for @Oreki from VitePress",
+  "main": "index.js",
+  "repository": "https://github.com/Orekiz/notebook-next",
+  "author": "Oreki",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.4"
+  }
+}
