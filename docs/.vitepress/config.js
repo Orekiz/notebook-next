@@ -4,10 +4,10 @@ const sidebar = [
   {
     text: 'JavaScript',
     collapsible: true,
-    // collapsed: true,
     items: [
         { text: '介绍', link: '/notes/js/' },
         { text: 'let和const', link: '/notes/js/letconst' },
+        { text: 'Array原型方法', link: '/notes/js/array-prototype' }
     ]
   },
   {
@@ -21,12 +21,17 @@ const sidebar = [
 ]
 
 export default defineConfig({
-  title: 'Oreki\'s Notebook',
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
+  title: 'Welcome',
+  titleTemplate: 'Oreki\'s Notebook',
   description: 'this is a Notebook for @Oreki',
   lang: 'zh-CN',
   lastUpdated: true,
 
   themeConfig: {
+    // logo: '/favicon.ico',
     siteTitle: '📔 Oreki\'s Notebook',
     socialLinks: [
         { icon: 'github', link: 'https://github.com/Orekiz' }
