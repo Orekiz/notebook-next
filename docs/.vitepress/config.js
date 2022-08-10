@@ -1,21 +1,57 @@
 import { defineConfig } from 'vitepress'
 
-const sidebar = [
+const homeSidebar = [
   {
     text: 'JavaScript',
     collapsible: true,
     items: [
-        { text: '介绍', link: '/notes/js/' },
-        { text: 'let和const', link: '/notes/js/letconst' },
-        { text: 'Array原型方法', link: '/notes/js/array-prototype' }
+        { text: '介绍', link: '/frontEnd/js/' },
+        { text: 'let和const', link: '/frontEnd/js/letconst' },
+        { text: 'Array原型方法', link: '/frontEnd/js/array-prototype' }
     ]
   },
   {
     text: 'TypeScript',
     collapsible: true,
-    collapsed: true,
+    // collapsed: true,
     items: [
-      { text: '介绍', link: '/notes/ts/'}
+      { text: '介绍', link: '/frontEnd/ts/'}
+    ]
+  },
+  {
+    text: 'Server服务器',
+    collapsible: true,
+    // collapsed: true,
+    items: [
+      { text: '服务器Docker配置思源笔记', link: '/server/Docker/siyuanNote' },
+    ]
+  }
+]
+const frontEndSidebar = [
+  {
+    text: 'JavaScript',
+    collapsible: true,
+    items: [
+        { text: '介绍', link: '/frontEnd/js/' },
+        { text: 'let和const', link: '/frontEnd/js/letconst' },
+        { text: 'Array原型方法', link: '/frontEnd/js/array-prototype' }
+    ]
+  },
+  {
+    text: 'TypeScript',
+    collapsible: true,
+    // collapsed: true,
+    items: [
+      { text: '介绍', link: '/frontEnd/ts/'}
+    ]
+  }
+]
+const serverSidebar = [
+  {
+    text: 'Docker',
+    collapsible: true,
+    items: [
+        { text: '服务器Docker配置思源笔记', link: '/server/Docker/siyuanNote' },
     ]
   }
 ]
@@ -36,8 +72,14 @@ export default defineConfig({
     socialLinks: [
         { icon: 'github', link: 'https://github.com/Orekiz' }
     ],
+    nav: [
+      { text: 'frontEnd-前端', link: '/frontEnd/js/', activeMatch: '/frontEnd/' },
+      { text: 'sever-服务器', link: '/server/Docker/siyuanNote', activeMatch: '/server/' }
+    ],
     sidebar: {
-      '/notes/': sidebar
+      '/notes/': homeSidebar,
+      '/frontEnd/': frontEndSidebar,
+      '/server/': serverSidebar
     },
     outlineTitle: '大纲',
     editLink: {
