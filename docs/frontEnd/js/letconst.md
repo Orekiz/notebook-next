@@ -65,3 +65,19 @@ PI // 3.1415
 
 PI = 3 // TypeError: Assignment to constant variable.
 ```
+
+上面代码表示改变常量的值会报错。
+不仅如此，const定义的变量必须当场给出初始值，否则会报错。
+
+```js
+const PI
+// SyntaxError: Missing initializer in const declaration
+```
+
+上面代码表示，对于`const`如果只声明不赋值就会报错。
+
+## let const 相同点
+
+- `let`和`const`都只在声明所在的代码块级作用域中生效。
+- 都存在暂时性死区，没有变量提升。只能在声明后使用。
+- 都不可重复声明。
