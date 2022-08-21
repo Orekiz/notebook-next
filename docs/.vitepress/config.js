@@ -7,7 +7,8 @@ const homeSidebar = [
     items: [
         { text: '介绍', link: '/frontEnd/js/' },
         { text: 'let和const', link: '/frontEnd/js/letconst' },
-        { text: 'Array原型方法', link: '/frontEnd/js/array-prototype' }
+        { text: 'Array原型方法', link: '/frontEnd/js/array-prototype' },
+        { text: 'Proxy', link: '/frontEnd/js/proxy' }
     ]
   },
   {
@@ -34,7 +35,8 @@ const frontEndSidebar = [
     items: [
         { text: '介绍', link: '/frontEnd/js/' },
         { text: 'let和const', link: '/frontEnd/js/letconst' },
-        { text: 'Array原型方法', link: '/frontEnd/js/array-prototype' }
+        { text: 'Array原型方法', link: '/frontEnd/js/array-prototype' },
+        { text: 'Proxy', link: '/frontEnd/js/proxy' }
     ]
   },
   {

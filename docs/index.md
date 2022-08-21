@@ -7,7 +7,7 @@ hero:
     tagline: "我的学习笔记，希望自己可以坚持下去不要三分钟热度半途而废。"
     actions:
     - theme: brand
-      text: Get Started / 起步
+      text: Get Started / 起步 💡
       link: /notes/
     - theme: alt
       text: View on GitHub
