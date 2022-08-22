@@ -110,3 +110,39 @@ personProxy.age // 抛出错误 ReferenceError: Prop name 'age' does not exist.
 ```
 
 上面的代码例子表示，如果访问目标对象中不存在的属性，则会抛出一个错误。如果没有架设该拦截器，则会是原生的方法，返回`undefined`。
+
+## Summary
+
+`Proxy`就像一个拦截器一样，外界对于目标对象的访问都需要经过这个拦截器。
+
+`Proxy`接受两个参数：
+
+1. target: 需要架设拦截器的目标对象
+2. handler: 自定义拦截的行为
+
+用法：
+
+```js
+const proxy = new Proxy(target, handler)
+```
+
+### 数组的拦截
+
+数组也是对象(`Object`)，所以数组一样可以拦截。
+
+```js
+const arr = [1, 2, 3]
+
+const myArr = new Proxy(arr, {
+  get: function (target, property, receiver) {
+    // ...
+  }
+  set: function (target, property, value, receiver) {
+    // ...
+  }
+})
+```
+
+上面是对数组的拦截的例子。
+
+需要注意的是，数组不同于普通对象，数组还有自带的`length`属性。JS默认的`set`行为会触发两次`set`拦截器，通过打印可以得知，第一次set是存入数据，第二次set是改变length属性。
