@@ -12,6 +12,6 @@
   "author": "Oreki",
   "license": "MIT",
   "devDependencies": {
-    "vitepress": "^1.0.0-alpha.4"
+    "vitepress": "^1.0.0-alpha.9"
   }
 }
