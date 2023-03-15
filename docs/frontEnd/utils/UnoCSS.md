@@ -1,0 +1,150 @@
+# UnoCSS
+
+超快 按需 原子 CSS引擎
+
+## 安装
+
+### vite
+
+```cmd
+npm: npm install -D unocss
+yarn: yarn add -D unocss
+pnpm: pnpm add -D unocss
+```
+
+```typescript
+// vite.config.ts
+import UnoCSS from 'unocss/vite'
+
+export default {
+    plugins: [
+        UnoCSS({ /* options */ })
+    ]
+}
+```
+
+## 预设 presets
+
+预设就是提前设置好的规则`presets` `rules`
+
+### 官方预设
+
+- `@unocss/presets-uno` - 默认预设 (等效于)`@unocss/presets-wind`
+- `@unocss/preset-attributify` - 可以直接在元素上使用属性来设置样式`attribute`
+- `@unocss/presets-icons` - 通过class使用各种图标库
+
+### vite中使用预设
+
+```typescript
+// vite.config.ts
+import UnoCSS from 'unocss/vite'
+import { presetsAttributify, presetUno } from 'unocss'
+
+export default {
+    plugins: [
+        UnoCSS({
+            presets: [
+                presetsAttributify(),
+                presetUno(),
+                // ...custom presets
+            ],
+        }),
+    ],
+}
+```
+
+## 自定义规则 rules
+可以定义专属于自己的工具类`class`
+
+### 静态规则
+
+```typescript
+rules: [
+    ['m-1', { margin: '0.25rem' }],
+]
+```
+
+每当使用 的时候，都会自动生成以下CSS: `.m-1` `m-1`
+
+```css
+.m-1 { margin: 0.25rem }
+```
+
+### 动态规则
+使用动态规则可以使其更智能
+需要将匹配器更改为正则表达式，主题更改为函数：
+
+```typescript
+rules: [
+    [/^m-(\d+)$/, ([, d]) => ({ margin: `${d / 4}rem` })],
+    [/^p-(\d+)$/, match => ({ padding: `${match[1] / 4}rem` })],
+]
+```
+函数的第一个参数是匹配结果，可以解构来获取匹配的组。
+例如：
+
+```html
+<div class='m-100'>
+    <button class='m-3'>
+        <icon class='p-5' />
+        My Button
+    </button>
+</div>
+```
+
+以上代码将生成相应的CSS:
+
+```css
+.m-100 { margin: 25rem }
+.m-3 { margin: 0.75rem }
+.p-5 { padding: 1.25rem }
+```
+
+## presets/icons
+
+使用纯CSS来使用图标
+
+这是图标的预设，可以使用 [iconify](https://iconify.design/) 图标库的所有图标。
+
+通过 [Icônes](https://icones.js.org/) 了解所有可用的图标包/集合
+
+### 安装
+
+如果项目中已经有unocss, 那么只需要下载相应所需的图标包就可以
+
+```cmd
+npm i -D @iconify-json/[the-collection-you-want]
+```
+
+如果不需要完整的unocss，只需presets/icon：
+
+```cmd
+npm i -D @unocss/preset-icons @iconify-json/[the-collection-you-want]
+```
+
+如果您希望一次安装 Iconify 上可用的所有图标集 （~130MB）：
+
+```cmd
+npm i -D @iconify/json
+```
+
+### 使用
+
+遵循约定：
+- `<prefix><collection>-<icon>`
+
+举例：
+```html
+<!-- A basic anchor icon from Phosphor icons -->
+<div class="i-ph-anchor-simple-thin" />
+<!-- An orange alarm from Material Design Icons -->
+<div class="i-mdi-alarm text-orange-400" />
+<!-- A large Vue logo -->
+<div class="i-logos-vue text-3xl" />
+<!-- Sun in light mode, Moon in dark mode, from Carbon -->
+<button class="i-carbon-sun dark:i-carbon-moon" />
+<!-- Twemoji of laugh, turns to tear on hovering -->
+<div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy" />
+```
+
+> 参考: [@unocss/reset-icons](https://github.com/unocss/unocss/tree/main/packages/preset-icons)

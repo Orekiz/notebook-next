@@ -20,6 +20,14 @@ const homeSidebar = [
     ]
   },
   {
+    text: 'Utils',
+    collapsible: true,
+    // collapsed: true,
+    items: [
+      { text: 'UnoCSS', link: '/frontEnd/utils/UnoCSS'}
+    ]
+  },
+  {
     text: 'Server服务器',
     collapsible: true,
     // collapsed: true,
@@ -46,7 +54,15 @@ const frontEndSidebar = [
     items: [
       { text: '介绍', link: '/frontEnd/ts/'}
     ]
-  }
+  },
+  {
+    text: 'Utils',
+    collapsible: true,
+    // collapsed: true,
+    items: [
+      { text: 'UnoCSS', link: '/frontEnd/utils/UnoCSS'}
+    ]
+  },
 ]
 const serverSidebar = [
   {
