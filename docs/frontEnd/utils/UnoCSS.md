@@ -4,13 +4,15 @@
 
 ## 安装
 
-### vite
+### 包管理工具
 
-```cmd
+```shell
 npm: npm install -D unocss
 yarn: yarn add -D unocss
 pnpm: pnpm add -D unocss
 ```
+
+### vite
 
 ```typescript
 // vite.config.ts
@@ -23,22 +25,30 @@ export default {
 }
 ```
 
+将`uno.css`添加至 main entry:
+
+```typescript
+// main.ts
+import 'uno.css'
+```
+
 ## 预设 presets
 
-预设就是提前设置好的规则`presets` `rules`
+预设就是提前设置好的规则`presets`
 
 ### 官方预设
 
-- `@unocss/presets-uno` - 默认预设 (等效于)`@unocss/presets-wind`
+- `@unocss/preset-uno` - 默认预设 (等效于`@unocss/presets-wind`)
+- `@unocss/preset-wind` - 相当于 tailwind 和 windi 的超集
 - `@unocss/preset-attributify` - 可以直接在元素上使用属性来设置样式`attribute`
-- `@unocss/presets-icons` - 通过class使用各种图标库
+- `@unocss/preset-icons` - 通过class使用各种图标库
 
 ### vite中使用预设
 
 ```typescript
 // vite.config.ts
 import UnoCSS from 'unocss/vite'
-import { presetsAttributify, presetUno } from 'unocss'
+import { presetAttributify, presetUno } from 'unocss'
 
 export default {
     plugins: [
@@ -53,6 +63,10 @@ export default {
 }
 ```
 
+::: warning
+设置`presets`后，会直接覆盖掉默认设（默认presets将失效），所以**必须**将所有需要的`presets`都写进去，否则只生效设置的。
+:::
+
 ## 自定义规则 rules
 可以定义专属于自己的工具类`class`
 
@@ -64,7 +78,7 @@ rules: [
 ]
 ```
 
-每当使用 的时候，都会自动生成以下CSS: `.m-1` `m-1`
+每当使用`.m-1` `m-1 (preset/attributify)`的时候，都会自动生成以下CSS: 
 
 ```css
 .m-1 { margin: 0.25rem }
@@ -110,23 +124,40 @@ rules: [
 
 ### 安装
 
-如果项目中已经有unocss, 那么只需要下载相应所需的图标包就可以
+如果项目中已经有unocss, 那么只需要下载相应所需的图标包就可以：
 
-```cmd
+```shell
 npm i -D @iconify-json/[the-collection-you-want]
+# 例： 需要Material Design Icons
+npm i -D @iconify-json/mdi
 ```
 
 如果不需要完整的unocss，只需presets/icon：
 
-```cmd
+```shell
 npm i -D @unocss/preset-icons @iconify-json/[the-collection-you-want]
 ```
 
 如果您希望一次安装 Iconify 上可用的所有图标集 （~130MB）：
 
-```cmd
+```shell
 npm i -D @iconify/json
 ```
+#### 装载
+
+``` typescript
+import presetIcons from '@unocss/preset-icons'
+
+UnoCSS({
+    presets: [
+        presetIcons({ /* options... */ })
+    ]
+})
+```
+
+:::tip
+可以单独使用这个预设，作为现有项目的补充。
+:::
 
 ### 使用
 
