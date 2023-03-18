@@ -174,8 +174,93 @@ UnoCSS({
 <div class="i-logos-vue text-3xl" />
 <!-- Sun in light mode, Moon in dark mode, from Carbon -->
 <button class="i-carbon-sun dark:i-carbon-moon" />
-<!-- Twemoji of laugh, turns to tear on hovering -->
-<div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy" />
 ```
 
 > 参考: [@unocss/reset-icons](https://github.com/unocss/unocss/tree/main/packages/preset-icons)
+
+## 变体 Variants
+
+- **dark**
+
+    设置 dark 暗黑模式下的样式
+
+    在以下代码出现时生效：
+
+    ``` html
+    <html class="dark">
+        <!-- ... -->
+    </html>
+    ```
+
+    or
+
+    ``` css
+    @media (prefers-color-scheme: dark) { /* ... */ }
+    ```
+
+    例子：
+
+    ``` html
+    <p text="gray-600 dark:light-600" >varients-dark</p>
+    ```
+
+    其中的`text="dark:light-600"`将生成如下css:
+    ``` css
+    .dark .dark\:gray-600, .dark [text="dark\:light-600"] {
+        --un-text-opacity: 1;
+        color: rgba(75, 85, 99, var(--un-text-opacity));
+    }
+    ```
+
+- **hover**
+
+    设置hover伪类的样式
+
+    例：
+
+    ``` html
+    <p hover:text-blue-300>varients-hover</p>
+    ```
+
+- **lt / at**
+
+    `windi css` 中可以使用变体：`<sm:p-1`，用以生成如下断点css:
+
+    ``` css
+    @media screen and (max-width: 640px) { /* ... */ }
+    ```
+
+    `unocss` 中有所不同，改变如下：
+
+    `lt` = `<`
+
+    `at` = `@`
+
+    :::tip
+    默认断点为 `min-width` - 最小宽度，这是 `mobile first 移动优先`
+
+    `windi css` 中使用 `<sm` 可以使用 `max-width` 断点 - 最大宽度
+    :::
+
+## 断点 breakpoint (varient)
+
+- sm: 640px
+- md: 768px
+- lg: 1024px
+- xl: 1280px
+- 2xl: 1536px
+
+### 使用
+
+``` html
+<section xl:max-w-1280px> ... </section>
+```
+
+上面代码中 `xl:max-w-1280px` 将生成如下CSS:
+
+``` css
+@media screen and (min-width: 1280px) {
+    [xl\:max-w-100] {
+        max-width: 100px;
+    }
+}
