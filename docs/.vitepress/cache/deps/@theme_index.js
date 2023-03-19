@@ -1,25 +1,25 @@
 // node_modules/vitepress/dist/client/theme-default/index.js
-import "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/styles/fonts.css";
+import "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/styles/fonts.css";
 
 // node_modules/vitepress/dist/client/theme-default/without-fonts.js
-import "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/styles/vars.css";
-import "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/styles/base.css";
-import "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/styles/utils.css";
-import "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/styles/components/custom-block.css";
-import "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code.css";
-import "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code-group.css";
-import "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/styles/components/vp-doc.css";
-import "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/styles/components/vp-sponsor.css";
-import VPBadge from "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
-import Layout from "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/Layout.vue";
-import { default as default2 } from "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/components/VPHomeHero.vue";
-import { default as default3 } from "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/components/VPHomeFeatures.vue";
-import { default as default4 } from "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/components/VPHomeSponsors.vue";
-import { default as default5 } from "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/components/VPDocAsideSponsors.vue";
-import { default as default6 } from "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/components/VPTeamPage.vue";
-import { default as default7 } from "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageTitle.vue";
-import { default as default8 } from "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageSection.vue";
-import { default as default9 } from "E:/AWorkspace/notebook-next/node_modules/vitepress/dist/client/theme-default/components/VPTeamMembers.vue";
+import "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/styles/vars.css";
+import "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/styles/base.css";
+import "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/styles/utils.css";
+import "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/styles/components/custom-block.css";
+import "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code.css";
+import "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code-group.css";
+import "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/styles/components/vp-doc.css";
+import "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/styles/components/vp-sponsor.css";
+import VPBadge from "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
+import Layout from "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/Layout.vue";
+import { default as default2 } from "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/components/VPHomeHero.vue";
+import { default as default3 } from "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/components/VPHomeFeatures.vue";
+import { default as default4 } from "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/components/VPHomeSponsors.vue";
+import { default as default5 } from "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/components/VPDocAsideSponsors.vue";
+import { default as default6 } from "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/components/VPTeamPage.vue";
+import { default as default7 } from "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageTitle.vue";
+import { default as default8 } from "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageSection.vue";
+import { default as default9 } from "D:/work space/ltx-notebook/node_modules/vitepress/dist/client/theme-default/components/VPTeamMembers.vue";
 var theme = {
   Layout,
   enhanceApp: ({ app }) => {
