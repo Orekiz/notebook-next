@@ -100,13 +100,14 @@ export default defineConfig({
       '/server/': serverSidebar
     },
     outlineTitle: '大纲',
+    outline: [1,4],
     editLink: {
       text: '在Github上编辑此页',
       pattern: 'https://github.com/Orekiz/notebook-next/edit/main/docs/:path'
     },
     footer: {
       // message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2022-present Oreki'
+      copyright: 'Copyright © 2022-present <a href="https://oreki.love" target="_blank">Oreki</a>'
     }
   }
 })
