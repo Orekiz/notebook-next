@@ -61,6 +61,9 @@ console.log(arrMap) // [11, 12, 13]
 ::: tip
 `map()`方法会创建一个新的数组，所以之前的数组不会受到影响, 需要声明一个新变量来接收新数组。
 :::
+:::warning
+**注意：回调函数需要 `return` !!**
+:::
 
 ## filter()
 
@@ -76,6 +79,10 @@ const result = arr.filter(item => {
 
 console.log(result) // [2, 3]
 ```
+
+:::warning
+**注意：回调函数需要 `return` !!**
+:::
 
 ## forEach()
 
