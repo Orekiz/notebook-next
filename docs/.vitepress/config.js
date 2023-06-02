@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-
+// 总的(home页)sidebar
 const homeSidebar = [
   {
     text: 'JavaScript',
@@ -20,6 +20,9 @@ const homeSidebar = [
     ]
   },
   {
+    text: 'Tauri', link: '/frontEnd/tauri/'
+  },
+  {
     text: 'Utils',
     collapsible: true,
     // collapsed: true,
@@ -36,6 +39,7 @@ const homeSidebar = [
     ]
   }
 ]
+// 前端笔记侧边栏
 const frontEndSidebar = [
   {
     text: 'JavaScript',
@@ -54,6 +58,9 @@ const frontEndSidebar = [
     items: [
       { text: '介绍', link: '/frontEnd/ts/'}
     ]
+  },
+  {
+    text: 'Tauri', link: '/frontEnd/tauri/'
   },
   {
     text: 'Utils',
