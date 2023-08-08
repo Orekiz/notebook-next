@@ -16,7 +16,8 @@ const homeSidebar = [
     collapsible: true,
     // collapsed: true,
     items: [
-      { text: '介绍', link: '/frontEnd/ts/'}
+      { text: '介绍', link: '/frontEnd/ts/'},
+      { text: '泛型', link: '/frontEnd/ts/泛型.md'}
     ]
   },
   {
@@ -56,7 +57,8 @@ const frontEndSidebar = [
     collapsible: true,
     // collapsed: true,
     items: [
-      { text: '介绍', link: '/frontEnd/ts/'}
+      { text: '介绍', link: '/frontEnd/ts/'},
+      { text: '泛型', link: '/frontEnd/ts/泛型.md'}
     ]
   },
   {
