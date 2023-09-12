@@ -21,7 +21,10 @@ const homeSidebar = [
     ]
   },
   {
-    text: 'Tauri', link: '/frontEnd/tauri/'
+    items: [
+      { text: 'Tauri', link: '/frontEnd/tauri/' },
+      { text: '学习制作博客', link: '/frontEnd/develop-blog.md' },
+    ]
   },
   {
     text: 'Utils',
@@ -62,7 +65,10 @@ const frontEndSidebar = [
     ]
   },
   {
-    text: 'Tauri', link: '/frontEnd/tauri/'
+    items: [
+      { text: 'Tauri', link: '/frontEnd/tauri/' },
+      { text: '学习制作博客', link: '/frontEnd/develop-blog.md' },
+    ]
   },
   {
     text: 'Utils',
