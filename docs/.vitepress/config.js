@@ -4,10 +4,10 @@ const homeSidebar = [
     text: 'JavaScript',
     collapsible: true,
     items: [
-        { text: '介绍', link: '/frontEnd/js/' },
-        { text: 'let和const', link: '/frontEnd/js/letconst' },
-        { text: 'Array原型方法', link: '/frontEnd/js/array-prototype' },
-        { text: 'Proxy', link: '/frontEnd/js/proxy' }
+      { text: '介绍', link: '/frontEnd/js/' },
+      { text: 'let和const', link: '/frontEnd/js/letconst' },
+      { text: 'Array原型方法', link: '/frontEnd/js/array-prototype' },
+      { text: 'Proxy', link: '/frontEnd/js/proxy' }
     ]
   },
   {
@@ -15,8 +15,8 @@ const homeSidebar = [
     collapsible: true,
     // collapsed: true,
     items: [
-      { text: '介绍', link: '/frontEnd/ts/'},
-      { text: '泛型', link: '/frontEnd/ts/泛型.md'}
+      { text: '介绍', link: '/frontEnd/ts/' },
+      { text: '泛型', link: '/frontEnd/ts/泛型.md' }
     ]
   },
   {
@@ -30,7 +30,7 @@ const homeSidebar = [
     collapsible: true,
     // collapsed: true,
     items: [
-      { text: 'UnoCSS', link: '/frontEnd/utils/UnoCSS'}
+      { text: 'UnoCSS', link: '/frontEnd/utils/UnoCSS' }
     ]
   },
   {
@@ -48,10 +48,10 @@ const frontEndSidebar = [
     text: 'JavaScript',
     collapsible: true,
     items: [
-        { text: '介绍', link: '/frontEnd/js/' },
-        { text: 'let和const', link: '/frontEnd/js/letconst' },
-        { text: 'Array原型方法', link: '/frontEnd/js/array-prototype' },
-        { text: 'Proxy', link: '/frontEnd/js/proxy' }
+      { text: '介绍', link: '/frontEnd/js/' },
+      { text: 'let和const', link: '/frontEnd/js/letconst' },
+      { text: 'Array原型方法', link: '/frontEnd/js/array-prototype' },
+      { text: 'Proxy', link: '/frontEnd/js/proxy' }
     ]
   },
   {
@@ -59,8 +59,8 @@ const frontEndSidebar = [
     collapsible: true,
     // collapsed: true,
     items: [
-      { text: '介绍', link: '/frontEnd/ts/'},
-      { text: '泛型', link: '/frontEnd/ts/泛型.md'}
+      { text: '介绍', link: '/frontEnd/ts/' },
+      { text: '泛型', link: '/frontEnd/ts/泛型.md' }
     ]
   },
   {
@@ -74,16 +74,17 @@ const frontEndSidebar = [
     collapsible: true,
     // collapsed: true,
     items: [
-      { text: 'UnoCSS', link: '/frontEnd/utils/UnoCSS'}
+      { text: 'UnoCSS', link: '/frontEnd/utils/UnoCSS' }
     ]
   },
 ]
+// 服务器笔记侧边栏
 const serverSidebar = [
   {
     text: 'Docker',
     collapsible: true,
     items: [
-        { text: '服务器Docker配置思源笔记', link: '/server/Docker/siyuanNote' },
+      { text: '服务器Docker配置思源笔记', link: '/server/Docker/siyuanNote' },
     ]
   }
 ]
@@ -102,7 +103,7 @@ export default {
     // logo: '/favicon.ico',
     siteTitle: '📔 Oreki\'s Notebook',
     socialLinks: [
-        { icon: 'github', link: 'https://github.com/Orekiz' }
+      { icon: 'github', link: 'https://github.com/Orekiz' }
     ],
     nav: [
       { text: 'frontEnd-前端', link: '/frontEnd/js/', activeMatch: '/frontEnd/' },
@@ -114,7 +115,7 @@ export default {
       '/server/': serverSidebar
     },
     outlineTitle: '大纲',
-    outline: [1,4],
+    outline: [1, 4],
     editLink: {
       text: '在Github上编辑此页',
       pattern: 'https://github.com/Orekiz/notebook-next/edit/main/docs/:path'

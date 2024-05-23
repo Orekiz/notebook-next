@@ -1,0 +1,57 @@
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+  :root {
+    --circle-stroke-light: #0f0f0f;
+    --circle-stroke-dark: #f0f0f0;
+  }
+  .dynamic-stroke {
+    stroke: var(--circle-stroke-light);
+  }
+  @media (prefers-color-scheme: dark) {
+    .dynamic-stroke {
+      stroke: var(--circle-stroke-dark);
+    }
+  }
+</style>
+<g clip-path="url(#clip0_2_5)">
+<g filter="url(#filter0_dd_2_5)">
+<circle class="dynamic-stroke" cx="12" cy="12" r="8.5" stroke-width="4" shape-rendering="crispEdges"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_dd_2_5" x="0.5" y="0.5" width="23" height="23" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-1" dy="-1"/>
+<feGaussianBlur stdDeviation="0.1"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.466667 0 0 0 0 0.803922 0 0 0 0 0.780392 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_5"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="1" dy="1"/>
+<feGaussianBlur stdDeviation="0.1"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.396078 0 0 0 0 0.54902 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_2_5" result="effect2_dropShadow_2_5"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_2_5" result="shape"/>
+</filter>
+<clipPath id="clip0_2_5">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+<script>
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+function toggleColorScheme(e) {
+  if (e.matches) {
+    document.documentElement.style.setProperty('--circle-stroke', 'var(--circle-stroke-dark)');
+  } else {
+    document.documentElement.style.setProperty('--circle-stroke', 'var(--circle-stroke-light)');
+  }
+}
+
+prefersDarkScheme.addListener(toggleColorScheme);
+toggleColorScheme(prefersDarkScheme);
+console.log(prefersDarkScheme)
+</script>
+</svg>

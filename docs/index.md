@@ -6,7 +6,7 @@ hero:
     text: Vite Powered Static Site.
     tagline: "我的学习笔记，希望自己可以坚持下去不要三分钟热度半途而废。"
     image:
-      src: /35621834.jpg
+      src: /Untitled.svg
     actions:
     - theme: brand
       text: Get Started / 起步 💡
