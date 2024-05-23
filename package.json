@@ -6,7 +6,7 @@
     "build": "vitepress build docs"
   },
   "version": "1.0.0",
-  "description": "notebook for @Oreki from VitePress",
+  "description": "Oreki's notebook made by VitePress",
   "main": "index.js",
   "repository": "https://github.com/Orekiz/notebook-next",
   "author": "Oreki",

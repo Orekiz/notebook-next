@@ -86,6 +86,11 @@ const serverSidebar = [
     items: [
       { text: '服务器Docker配置思源笔记', link: '/server/Docker/siyuanNote' },
     ]
+  },
+  {
+    items: [
+      { text: '雷池防火墙', link: '/server/safeline' }
+    ]
   }
 ]
 
