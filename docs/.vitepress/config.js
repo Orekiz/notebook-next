@@ -1,4 +1,3 @@
-import { defineConfig } from 'vitepress'
 // 总的(home页)sidebar
 const homeSidebar = [
   {
@@ -89,7 +88,7 @@ const serverSidebar = [
   }
 ]
 
-export default defineConfig({
+export default {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
@@ -125,4 +124,4 @@ export default defineConfig({
       copyright: 'Copyright © 2022-present <a href="https://oreki.love" target="_blank">Oreki</a>'
     }
   }
-})
+}
