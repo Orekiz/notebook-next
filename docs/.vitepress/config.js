@@ -7,7 +7,7 @@ const homeSidebar = [
       { text: '介绍', link: '/frontEnd/js/' },
       { text: 'let和const', link: '/frontEnd/js/letconst' },
       { text: 'Array原型方法', link: '/frontEnd/js/array-prototype' },
-      { text: 'Proxy', link: '/frontEnd/js/proxy' }
+      { text: 'Proxy', link: '/frontEnd/js/proxy' },
     ]
   },
   {
@@ -16,7 +16,7 @@ const homeSidebar = [
     // collapsed: true,
     items: [
       { text: '介绍', link: '/frontEnd/ts/' },
-      { text: '泛型', link: '/frontEnd/ts/泛型.md' }
+      { text: '泛型', link: '/frontEnd/ts/泛型.md' },
     ]
   },
   {
@@ -30,7 +30,7 @@ const homeSidebar = [
     collapsible: true,
     // collapsed: true,
     items: [
-      { text: 'UnoCSS', link: '/frontEnd/utils/UnoCSS' }
+      { text: 'UnoCSS', link: '/frontEnd/utils/UnoCSS' },
     ]
   },
   {
@@ -38,7 +38,8 @@ const homeSidebar = [
     collapsible: true,
     // collapsed: true,
     items: [
-      { text: '服务器Docker配置思源笔记', link: '/server/Docker/siyuanNote' },
+      { text: 'Docker 思源笔记', link: '/server/Docker/siyuanNote' },
+      { text: '雷池网站防火墙WAF', link: '/server/safeline' },
     ]
   }
 ]
@@ -89,7 +90,7 @@ const serverSidebar = [
   },
   {
     items: [
-      { text: '雷池防火墙', link: '/server/safeline' }
+      { text: '雷池网站防火墙WAF', link: '/server/safeline' }
     ]
   }
 ]
@@ -111,6 +112,7 @@ export default {
       { icon: 'github', link: 'https://github.com/Orekiz' }
     ],
     nav: [
+      { text: '全部', link: '/notes', activeMatch: '/notes/' },
       { text: 'frontEnd-前端', link: '/frontEnd/js/', activeMatch: '/frontEnd/' },
       { text: 'sever-服务器', link: '/server/Docker/siyuanNote', activeMatch: '/server/' }
     ],
