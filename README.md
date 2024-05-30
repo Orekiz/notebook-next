@@ -2,4 +2,4 @@
 
 this is my notebook - brand new.
 
-dev版本预览[Preview](notebook-nkls-git-dev-orekizs-projects.vercel.app)
+dev版本预览[Preview](notebook-git-dev-orekizs-projects.vercel.app)
