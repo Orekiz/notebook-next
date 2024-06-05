@@ -38,7 +38,8 @@ const homeSidebar = [
     collapsible: true,
     // collapsed: true,
     items: [
-      { text: 'Docker 思源笔记', link: '/server/Docker/siyuanNote' },
+      { text: 'Docker部署思源笔记', link: '/server/Docker/siyuanNote' },
+      { text: 'Docker部署Redis', link: '/server/Docker/redis' },
       { text: '雷池网站防火墙WAF', link: '/server/safeline' },
     ]
   }
@@ -85,7 +86,8 @@ const serverSidebar = [
     text: 'Docker',
     collapsible: true,
     items: [
-      { text: '服务器Docker配置思源笔记', link: '/server/Docker/siyuanNote' },
+      { text: 'Docker部署思源笔记', link: '/server/Docker/siyuanNote' },
+      { text: 'Docker部署Redis', link: '/server/Docker/redis' },
     ]
   },
   {
