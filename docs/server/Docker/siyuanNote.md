@@ -25,12 +25,13 @@
     网络问题，Docker默认源DockerHub外国网站速度较慢
 
     添加国内镜像源
+    > 下面代码中为南京大学docker-hub镜像
 
     ```sh
     vim /etc/docker/daemon.json
     # 添加内容
     {
-      "registry-mirrors": ["https://registry.docker-cn.com"]
+      "registry-mirrors": ["https://docker.nju.edu.cn/"]
     }
     ```
     
