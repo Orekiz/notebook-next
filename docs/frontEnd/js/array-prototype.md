@@ -1,5 +1,40 @@
 # Array原型方法
 
+### 根据用法快速检索
+
+**会改变原数组**
+- 删除第一个元素 [shift](#shift)
+- 删除最后一个 [pop](#pop)
+- 删除指定位置长度的元素们，可设置替换元素 [splice](#splice)
+
+**返回新数组**
+- 切片 [slice](#slice)
+- 过滤 [filter](#filter)
+- 处理每个元素 [map](#map)
+- splice的非修改方法 [toSpliced](#tospliced)
+
+**其他**
+- 完整遍历整个数组 [forEach](#foreach)
+- 可以负数下标访问元素的方法 [at](#at)
+
+
+## at()
+
+> ES2022
+
+`at()` 方法接收一个索引值（整数，支持负数），返回数组中对应位置的元素。
+
+```js
+const arr = [1, 2, 3]
+const item = arr.at(-1)
+
+console.log(item) // 3
+```
+
+:::tip
+`at()` 方法可以接收负数索引，负数索引表示从数组末尾开始计算位置，例如 `-1` 表示最后一个元素，`-2` 表示倒数第二个元素，以此类推。
+:::
+
 ## shift()
 
 `shift()` 方法删除数组第一个元素，并返回该元素的值。
@@ -20,12 +55,11 @@ console.log(arr) // [1, 2]
 
 `pop()` 方法删除数组最后一个元素，并返回该元素的值。
 
-
 ```js
 const arr = [1, 2, 3]
-const firstItem = arr.pop()
+const lastItem = arr.pop()
 
-console.log(firstItem) // 1
+console.log(lastItem) // 3
 console.log(arr) // [2, 3]
 ```
 
@@ -45,6 +79,42 @@ const newArr = arr.slice(2, 4)
 
 console.log(newArr) // [2, 3]
 ```
+
+## splice()
+
+`splice()` 方法通过删除现有元素和/或添加新元素来更改一个数组的内容。
+
+```js
+const arr = [1, 2, 3]
+arr.splice(1, 1, 4)
+
+console.log(arr) // [1, 4, 3]
+```
+
+:::tip
+第一个参数为开始位置，第二个参数为删除的个数，第三个参数为插入的元素
+:::
+:::warning
+该方法会改动原数组，如果原数组有用请谨慎使用！
+:::
+
+## toSpliced()
+
+> ES2023
+
+[splice](#splice) 方法的非修改原数组方法
+
+`toSpliced()` 方法返回一个新数组，该数组包含原数组中从开始到结束（不包括结束）的元素，并替换指定位置的元素。
+
+```js
+const arr = [1, 2, 3]
+const newArr = arr.toSpliced(1, 1, 4)
+
+console.log(newArr) // [1, 4, 3]
+```
+:::tip
+第一个参数为开始位置，第二个参数为删除的个数，第三个参数为插入的元素
+:::
 
 ## map()
 
