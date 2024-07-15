@@ -22,10 +22,12 @@
     Error response from daemon
     ```
 
-    网络问题，Docker默认源DockerHub外国网站速度较慢
+    网络问题，Docker默认镜像源DockerHub为外国网站 ~~速度较慢~~ 已禁止访问
 
     添加国内镜像源
-    > 下面代码中为南京大学docker-hub镜像
+    
+    > 下面代码中为南京大学docker-hub镜像  
+    2024-06-10: 南京大学docker-hub镜像站停止服务
 
     ```sh
     vim /etc/docker/daemon.json
@@ -39,7 +41,7 @@
 
     ```sh
     # 重新载入systemd，扫描新的或有变动的单元
-    systemctl daemon.reload
+    systemctl daemon-reload
     # 重启Docker服务
     systemctl restart docker
     ```
