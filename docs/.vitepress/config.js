@@ -120,8 +120,8 @@ export default {
     ],
     nav: [
       { text: '全部', link: '/notes', activeMatch: '/notes/' },
-      { text: 'frontEnd-前端', link: '/frontEnd/js/', activeMatch: '/frontEnd/' },
-      { text: 'sever-服务器', link: '/server/Docker/siyuanNote', activeMatch: '/server/' }
+      { text: 'frontEnd 前端', link: '/frontEnd/js/', activeMatch: '/frontEnd/' },
+      { text: 'sever 服务', link: '/server/Docker/siyuanNote', activeMatch: '/server/' }
     ],
     sidebar: {
       '/notes/': homeSidebar,
