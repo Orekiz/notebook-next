@@ -38,8 +38,10 @@ const homeSidebar = [
     collapsible: true,
     // collapsed: true,
     items: [
+      { text: 'Docker', link: '/server/Docker/' },
       { text: 'Docker部署思源笔记', link: '/server/Docker/siyuanNote' },
       { text: 'Docker部署Redis', link: '/server/Docker/redis' },
+      { text: 'Docker部署RabbitMQ', link: '/server/Docker/rabbitMQ' },
       { text: '雷池网站防火墙WAF', link: '/server/safeline' },
     ]
   }
@@ -84,11 +86,13 @@ const frontEndSidebar = [
 // 服务器笔记侧边栏
 const serverSidebar = [
   {
-    text: 'Docker',
+    text: 'Docker相关',
     collapsible: true,
     items: [
+      { text: 'Docker', link: '/server/Docker/' },
       { text: 'Docker部署思源笔记', link: '/server/Docker/siyuanNote' },
       { text: 'Docker部署Redis', link: '/server/Docker/redis' },
+      { text: 'Docker部署RabbitMQ', link: '/server/Docker/rabbitMQ' }
     ]
   },
   {
@@ -125,7 +129,7 @@ export default {
       '/server/': serverSidebar
     },
     outlineTitle: '大纲',
-    outline: [1, 4],
+    outline: [1, 3],
     editLink: {
       text: '在Github上编辑此页',
       pattern: 'https://github.com/Orekiz/notebook-next/edit/main/docs/:path'
