@@ -34,7 +34,7 @@ const homeSidebar = [
     ]
   },
   {
-    text: 'Server服务器',
+    text: 'Server与后端服务',
     collapsible: true,
     // collapsed: true,
     items: [
@@ -43,6 +43,7 @@ const homeSidebar = [
       { text: 'Docker部署Redis', link: '/server/Docker/redis' },
       { text: 'Docker部署RabbitMQ', link: '/server/Docker/rabbitMQ' },
       { text: '雷池网站防火墙WAF', link: '/server/safeline' },
+      { text: 'RabbitMQ', link: '/server/backend/rabbitMQ' },
     ]
   }
 ]
@@ -96,6 +97,12 @@ const serverSidebar = [
     ]
   },
   {
+    text: '后端服务',
+    items: [
+      { text: 'RabbitMQ', link: '/server/backend/rabbitMQ' },
+    ]
+  },
+  {
     items: [
       { text: '雷池网站防火墙WAF', link: '/server/safeline' }
     ]
@@ -108,7 +115,7 @@ export default {
   ],
   title: 'Welcome',
   titleTemplate: 'Oreki\'s Notebook',
-  description: 'this is a Notebook for @Oreki',
+  description: 'this is @Oreki\'s notebook',
   lang: 'zh-CN',
   lastUpdated: true,
 
