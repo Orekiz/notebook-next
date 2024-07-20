@@ -123,6 +123,9 @@ export default {
 
   themeConfig: {
     // logo: '/favicon.ico',
+    search: {
+      provider: 'local',
+    },
     siteTitle: '📔 Oreki\'s Notebook',
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Orekiz' }
