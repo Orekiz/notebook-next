@@ -87,13 +87,13 @@ wsl --unregister Ubuntu
 
 导入镜像
 
-```bash
-wsl --import distroName installLocation imagePath
+```shell
+wsl --import [DistroName] [InstallLocation] [ImagePath]
 ```
 
-- distroName 将要安装的WSL实例的名字
-- installLocation：安装位置
-- imagePath：镜像位置
+- DistroName 将要安装的WSL实例的名字
+- InstallLocation：安装位置
+- ImagePath：镜像位置
 
 ## 一些配置
 
