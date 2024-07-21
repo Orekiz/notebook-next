@@ -107,7 +107,7 @@ wsl --import [DistroName] [InstallLocation] [ImagePath]
 
 子系统 `/etc/wsl.conf`
 
-```conf
+```txt
 [user]
 default=用户名
 ```
@@ -116,7 +116,7 @@ default=用户名
 
 宿主机目录 `C:\Users\用户名\.wslconfig`
 
-```conf
+```txt
 [wsl2]
 networkingMode=mirrored
 ```
@@ -129,7 +129,7 @@ networkingMode=mirrored
 
 宿主机 `C:\Users\用户名\.wslconfig`
 
-```conf
+```txt
 [experimental]
 autoMemoryReclaim=gradual
 ```
@@ -142,7 +142,7 @@ autoMemoryReclaim=gradual
 
 宿主机 `C:\Users\用户名\.wslconfig`
 
-```conf
+```txt
 [experimental]
 sparseVhd=true
 ```

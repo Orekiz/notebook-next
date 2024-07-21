@@ -23,7 +23,7 @@ vim redis/conf/redis.conf
 
 配置文件内容：
 
-```conf
+```txt
 port 6379
 bind 0.0.0.0
 requirepass your_password
