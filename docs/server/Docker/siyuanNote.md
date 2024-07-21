@@ -53,7 +53,7 @@
 根据拉取的思源笔记镜像运行容器：
 
 ```sh
-docker run -d --name siyuanNote -v /siyuan/workspace:/siyuan/workspace -p 6806:6806 -u 1000:1000 b3log/siyuan --workspace=/siyuan/workspace
+docker run -d --name siyuanNote -v /siyuan/workspace:/siyuan/workspace -p 6806:6806 -u 1000:1000 b3log/siyuan --workspace=/siyuan/workspace --accessAuthCode=xxx
 ```
 
 **参数解释：**
@@ -64,6 +64,7 @@ docker run -d --name siyuanNote -v /siyuan/workspace:/siyuan/workspace -p 6806:6
 * `-p` 端口映射
 * `-u` 给用户组的权限
 * `--workspace` 容器的工作目录
+* `--accessAuthCode` 访问权限码
 
 ### 关于用户权限的问题
 

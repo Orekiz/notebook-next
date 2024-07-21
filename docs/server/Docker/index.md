@@ -18,19 +18,19 @@
 
 先更新下apt源索引。
 
-```bash
-sudo apt-get update
+```shell
+sudo apt update
 ```
 
 安装使用HTTPS传输的软件包以及CA证书让APT使用HTTPS下载。
 
-```bash
-sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release
+```shell
+sudo apt install apt-transport-https ca-certificates curl gnupg lsb-release
 ```
 
 为了确认所下载软件包的合法性，需要添加软件源的 GPG 密钥。
 
-```bash
+```shell
 # 阿里源
 curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
@@ -40,7 +40,7 @@ curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo gpg --de
 
 向`/etc/apt/sources.list.d/docker.list`文件中添加Docker软件源。
 
-```bash
+```shell
 # 阿里源
 echo \
   "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
@@ -53,21 +53,21 @@ echo \
 
 更新apt软件包索引，并安装最新版本的Docker-CE(Community Edition)和containerd。
 
-```bash
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+```shell
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
 #### 启动!
 
-```bash
+```shell
 sudo systemctl enable docker
 sudo systemctl start docker
 ```
 
 #### 验证安装
 
-```bash
+```shell
 sudo docker --version
 ```
 
@@ -75,13 +75,13 @@ sudo docker --version
 
 **搜索镜像**
 
-```bash
+```shell
 docker search [镜像名]
 ```
 
 **拉取镜像**
 
-```bash
+```shell
 docker pull [镜像名]
 ```
 
@@ -89,7 +89,7 @@ docker pull [镜像名]
 
 通过指定镜像来创建并运行容器
 
-```bash
+```shell
 docker run [镜像名]
 ```
 
@@ -106,37 +106,37 @@ docker run [镜像名]
 
 **查看容器**
 
-```bash
+```shell
 docker ps
 ```
 
 **查看所有容器**
 
-```bash
+```shell
 docker ps -a
 ```
 
 **停止容器**
 
-```bash
+```shell
 docker stop [容器名]
 ```
 
 **删除容器**
 
-```bash
+```shell
 docker rm [容器名]
 ```
 
 **查看镜像**
 
-```bash
+```shell
 docker images
 ```
 
 **删除镜像**
 
-```bash
+```shell
 docker rmi [镜像名]
 ```
 
@@ -156,33 +156,47 @@ docker rmi [镜像名]
 
 ### 创建卷
 
-```bash
+```shell
 docker volume create [卷名]
 ```
 
 ### 查看卷
 
-```bash
+```shell
 docker volume ls
 ```
 
 ### 删除卷
 
-```bash
+```shell
 docker volume rm [卷名]
 ```
 
 ### 查看卷详情
 
-```bash
+```shell
 docker volume inspect [卷名]
 ```
 
 ### 挂载卷
 
-```bash
+```shell
 docker run -v [卷名]:[容器内路径] [镜像名]
 ```
+
+## 容器的更新
+
+镜像更新了，需要用新的镜像来创建新的容器。
+
+这样的话，新的容器并没有老容器的数据，  
+如果需要保留老容器的数据，需要将旧容器的数据卷挂载到新容器中。
+
+```shell
+docker run --volumes-from [容器的name或id]
+```
+
+在 `docker run` 创建并运行容器的时候，使用 `--volumes-from` 参数，并指定容器的 name 或 id, 可以将别的容器的数据卷挂载到新容器中。使用这个数据卷的设置，宿主机和容器的路径保持原样。
+
 
 ## docker-hub的镜像站
 

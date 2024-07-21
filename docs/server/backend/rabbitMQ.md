@@ -10,7 +10,7 @@ RabbitMQ是AMQP协议的实现者，所以可以直接使用amqp协议的客户�
 
 安装amqp node客户端：
 
-```bash
+```shell
 npm install amqplib
 ```
 

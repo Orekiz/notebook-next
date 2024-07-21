@@ -23,7 +23,7 @@ vim redis/conf/redis.conf
 
 配置文件内容：
 
-```conf
+```txt
 port 6379
 bind 0.0.0.0
 requirepass your_password
@@ -100,7 +100,7 @@ auth password
 需要安装redis-tools
 
 ```sh
-apt-get install redis-tools
+apt install redis-tools
 ```
 
 上面代码为ubuntu系统。
