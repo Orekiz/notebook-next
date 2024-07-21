@@ -100,7 +100,7 @@ auth password
 需要安装redis-tools
 
 ```sh
-apt-get install redis-tools
+apt install redis-tools
 ```
 
 上面代码为ubuntu系统。

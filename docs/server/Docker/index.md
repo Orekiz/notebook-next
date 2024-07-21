@@ -19,13 +19,13 @@
 先更新下apt源索引。
 
 ```shell
-sudo apt-get update
+sudo apt update
 ```
 
 安装使用HTTPS传输的软件包以及CA证书让APT使用HTTPS下载。
 
 ```shell
-sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release
+sudo apt install apt-transport-https ca-certificates curl gnupg lsb-release
 ```
 
 为了确认所下载软件包的合法性，需要添加软件源的 GPG 密钥。
@@ -54,8 +54,8 @@ echo \
 更新apt软件包索引，并安装最新版本的Docker-CE(Community Edition)和containerd。
 
 ```shell
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
 #### 启动!
