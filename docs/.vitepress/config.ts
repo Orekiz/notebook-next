@@ -27,6 +27,7 @@ const homeSidebar = [
       { text: 'Tauri', link: '/frontEnd/tauri/' },
       { text: '学习制作博客', link: '/frontEnd/develop-blog.md' },
       { text: 'WSL', link: '/frontEnd/wsl'},
+      { text: 'Bun', link: '/frontEnd/bun'},
     ]
   },
   {
@@ -49,6 +50,7 @@ const homeSidebar = [
     ]
   }
 ]
+
 // 前端笔记侧边栏
 const frontEndSidebar = [
   {
@@ -75,7 +77,8 @@ const frontEndSidebar = [
     items: [
       { text: 'Tauri', link: '/frontEnd/tauri/' },
       { text: '学习制作博客', link: '/frontEnd/develop-blog.md' },
-      { text: 'WSL', link: '/frontEnd/wsl'}
+      { text: 'WSL', link: '/frontEnd/wsl'},
+      { text: 'Bun', link: '/frontEnd/bun'},
     ]
   },
   {
@@ -86,6 +89,7 @@ const frontEndSidebar = [
     ]
   },
 ]
+
 // 服务器笔记侧边栏
 const serverSidebar = [
   {
@@ -100,12 +104,14 @@ const serverSidebar = [
   },
   {
     text: '后端服务',
+    collapsed: false,
     items: [
       { text: 'RabbitMQ', link: '/server/backend/rabbitMQ' },
     ]
   },
   {
     text: 'Other',
+    collapsed: false,
     items: [
       { text: '雷池网站防火墙WAF', link: '/server/safeline' }
     ]
