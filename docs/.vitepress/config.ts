@@ -1,8 +1,10 @@
+import { defineConfig } from 'vitepress'
+
 // 总的(home页)sidebar
 const homeSidebar = [
   {
     text: 'JavaScript',
-    collapsible: true,
+    collapsed: false,
     items: [
       { text: '介绍', link: '/frontEnd/js/' },
       { text: 'let和const', link: '/frontEnd/js/letconst' },
@@ -12,14 +14,15 @@ const homeSidebar = [
   },
   {
     text: 'TypeScript',
-    collapsible: true,
-    // collapsed: true,
+    collapsed: false,
     items: [
       { text: '介绍', link: '/frontEnd/ts/' },
       { text: '泛型', link: '/frontEnd/ts/泛型.md' },
     ]
   },
   {
+    text: 'Other',
+    collapsed: false,
     items: [
       { text: 'Tauri', link: '/frontEnd/tauri/' },
       { text: '学习制作博客', link: '/frontEnd/develop-blog.md' },
@@ -28,16 +31,14 @@ const homeSidebar = [
   },
   {
     text: 'Utils',
-    collapsible: true,
-    // collapsed: true,
+    collapsed: false,
     items: [
       { text: 'UnoCSS', link: '/frontEnd/utils/UnoCSS' },
     ]
   },
   {
     text: 'Server与后端服务',
-    collapsible: true,
-    // collapsed: true,
+    collapsed: false,
     items: [
       { text: 'Docker', link: '/server/Docker/' },
       { text: 'Docker部署思源笔记', link: '/server/Docker/siyuanNote' },
@@ -52,7 +53,7 @@ const homeSidebar = [
 const frontEndSidebar = [
   {
     text: 'JavaScript',
-    collapsible: true,
+    collapsed: false,
     items: [
       { text: '介绍', link: '/frontEnd/js/' },
       { text: 'let和const', link: '/frontEnd/js/letconst' },
@@ -62,8 +63,7 @@ const frontEndSidebar = [
   },
   {
     text: 'TypeScript',
-    collapsible: true,
-    // collapsed: true,
+    collapsed: false,
     items: [
       { text: '介绍', link: '/frontEnd/ts/' },
       { text: '泛型', link: '/frontEnd/ts/泛型.md' }
@@ -71,6 +71,7 @@ const frontEndSidebar = [
   },
   {
     text: 'Other',
+    collapsed: false,
     items: [
       { text: 'Tauri', link: '/frontEnd/tauri/' },
       { text: '学习制作博客', link: '/frontEnd/develop-blog.md' },
@@ -79,8 +80,7 @@ const frontEndSidebar = [
   },
   {
     text: 'Utils',
-    collapsible: true,
-    // collapsed: true,
+    collapsed: false,
     items: [
       { text: 'UnoCSS', link: '/frontEnd/utils/UnoCSS' }
     ]
@@ -90,7 +90,7 @@ const frontEndSidebar = [
 const serverSidebar = [
   {
     text: 'Docker相关',
-    collapsible: true,
+    collapsed: false,
     items: [
       { text: 'Docker', link: '/server/Docker/' },
       { text: 'Docker部署思源笔记', link: '/server/Docker/siyuanNote' },
@@ -105,13 +105,14 @@ const serverSidebar = [
     ]
   },
   {
+    text: 'Other',
     items: [
       { text: '雷池网站防火墙WAF', link: '/server/safeline' }
     ]
   }
 ]
 
-export default {
+export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
@@ -180,4 +181,4 @@ export default {
       copyright: 'Copyright © 2022-present <a href="https://oreki.love" target="_blank">Oreki</a>'
     }
   }
-}
+})
