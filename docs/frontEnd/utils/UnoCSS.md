@@ -8,11 +8,21 @@
 
 ### 包管理工具
 
-```shell
-npm: npm install -D unocss
-yarn: yarn add -D unocss
-pnpm: pnpm add -D unocss
+::: code-group
+
+```shell [pnpm]
+pnpm add -D unocss
 ```
+
+```shell [yarn]
+yarn add -D unocss
+```
+
+```shell [npm]
+npm install -D unocss
+```
+
+:::
 
 ### vite
 

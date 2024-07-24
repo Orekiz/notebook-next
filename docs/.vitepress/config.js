@@ -167,8 +167,10 @@ export default {
       '/frontEnd/': frontEndSidebar,
       '/server/': serverSidebar
     },
-    outlineTitle: '大纲',
-    outline: [1, 3],
+    outline: {
+      label: '大纲',
+      level: [2, 4],
+    },
     editLink: {
       text: '在Github上编辑此页',
       pattern: 'https://github.com/Orekiz/notebook-next/edit/main/docs/:path'
