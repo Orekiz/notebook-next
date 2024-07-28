@@ -1,5 +1,6 @@
 {
   "name": "notebook-next",
+  "type": "module",
   "scripts": {
     "dev": "vitepress dev docs",
     "serve": "vitepress serve docs",
