@@ -9,6 +9,28 @@ Bun是：
 - 测试运行器
 - 自带 `SQLite3` 客户端
 
+## 安装
+
+### Linux
+
+```shell
+curl -fsSL https://bun.sh/install | bash
+```
+
+使用[gitee bun-cn 镜像](https://gitee.com/akirarika/bun-cn)：
+
+```shell
+curl -fsSL https://gitee.com/akirarika/bun-cn/raw/main/install.sh | bash
+```
+
+### Windows
+
+使用 `Scoop` 包管理
+
+```shell
+scoop install bun
+```
+
 ## JS运行时
 
 ```shell
@@ -32,6 +54,7 @@ Bun 支持 `JSX` 和 `TSX`。
 跟其他包管理器命令一样的，无缝切换。
 
 ```shell
+bun init
 bun install # i
 bun add foo
 bun remove # rm

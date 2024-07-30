@@ -41,6 +41,7 @@ const homeSidebar = [
     text: 'Server与后端服务',
     collapsed: false,
     items: [
+      { text: 'SSH', link: '/server/SSH' },
       { text: 'Docker', link: '/server/Docker/' },
       { text: 'Docker部署思源笔记', link: '/server/Docker/siyuanNote' },
       { text: 'Docker部署Redis', link: '/server/Docker/redis' },
@@ -113,6 +114,7 @@ const serverSidebar = [
     text: 'Other',
     collapsed: false,
     items: [
+      { text: 'SSH', link: '/server/SSH' },
       { text: '雷池网站防火墙WAF', link: '/server/safeline' }
     ]
   }
