@@ -28,6 +28,7 @@ const homeSidebar = [
       { text: '学习制作博客', link: '/frontEnd/develop-blog.md' },
       { text: 'WSL', link: '/frontEnd/wsl'},
       { text: 'Bun', link: '/frontEnd/bun'},
+      { text: 'CloudFlare', link: '/frontEnd/cloudflare' },
     ]
   },
   {
@@ -80,6 +81,7 @@ const frontEndSidebar = [
       { text: '学习制作博客', link: '/frontEnd/develop-blog.md' },
       { text: 'WSL', link: '/frontEnd/wsl'},
       { text: 'Bun', link: '/frontEnd/bun'},
+      { text: 'CloudFlare', link: '/frontEnd/cloudflare' },
     ]
   },
   {
