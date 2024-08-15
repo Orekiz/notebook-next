@@ -49,6 +49,7 @@ const homeSidebar = [
       { text: 'Docker部署RabbitMQ', link: '/server/Docker/rabbitMQ' },
       { text: '雷池网站防火墙WAF', link: '/server/safeline' },
       { text: 'RabbitMQ', link: '/server/backend/rabbitMQ' },
+      { text: 'Hono', link: '/server/backend/hono' },
     ]
   }
 ]
@@ -110,6 +111,7 @@ const serverSidebar = [
     collapsed: false,
     items: [
       { text: 'RabbitMQ', link: '/server/backend/rabbitMQ' },
+      { text: 'Hono', link: '/server/backend/hono' },
     ]
   },
   {
