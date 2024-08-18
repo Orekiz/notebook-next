@@ -28,6 +28,7 @@ const homeSidebar = [
       { text: '学习制作博客', link: '/frontEnd/develop-blog.md' },
       { text: 'WSL', link: '/frontEnd/wsl'},
       { text: 'Bun', link: '/frontEnd/bun'},
+      { text: 'CloudFlare', link: '/frontEnd/cloudflare' },
     ]
   },
   {
@@ -48,6 +49,7 @@ const homeSidebar = [
       { text: 'Docker部署RabbitMQ', link: '/server/Docker/rabbitMQ' },
       { text: '雷池网站防火墙WAF', link: '/server/safeline' },
       { text: 'RabbitMQ', link: '/server/backend/rabbitMQ' },
+      { text: 'Hono', link: '/server/backend/hono' },
     ]
   }
 ]
@@ -80,6 +82,7 @@ const frontEndSidebar = [
       { text: '学习制作博客', link: '/frontEnd/develop-blog.md' },
       { text: 'WSL', link: '/frontEnd/wsl'},
       { text: 'Bun', link: '/frontEnd/bun'},
+      { text: 'CloudFlare', link: '/frontEnd/cloudflare' },
     ]
   },
   {
@@ -108,6 +111,7 @@ const serverSidebar = [
     collapsed: false,
     items: [
       { text: 'RabbitMQ', link: '/server/backend/rabbitMQ' },
+      { text: 'Hono', link: '/server/backend/hono' },
     ]
   },
   {
