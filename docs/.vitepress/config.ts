@@ -36,6 +36,7 @@ const homeSidebar = [
     collapsed: false,
     items: [
       { text: 'UnoCSS', link: '/frontEnd/utils/UnoCSS' },
+      { text: 'shadcnUI', link: '/frontEnd/utils/shadcn-ui' },
     ]
   },
   {
@@ -89,7 +90,8 @@ const frontEndSidebar = [
     text: 'Utils',
     collapsed: false,
     items: [
-      { text: 'UnoCSS', link: '/frontEnd/utils/UnoCSS' }
+      { text: 'UnoCSS', link: '/frontEnd/utils/UnoCSS' },
+      { text: 'shadcnUI', link: '/frontEnd/utils/shadcn-ui' },
     ]
   },
 ]
