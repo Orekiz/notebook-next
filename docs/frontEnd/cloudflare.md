@@ -81,6 +81,39 @@ pnpm run deploy # package.json 里的 scripts 命令 (其实就是上面的命�
 部署项目需要先使用 `pnpm wrangler login` 命令来登录 CloudFlare。
 :::
 
+### Email Worker
+
+CloudFlare Worker 可以接收电子邮件（需要在 CloudFlare 工作台上开启电子邮件发送到 Worker）。
+
+实例：
+
+```js
+export default {
+  async email(message, env, ctx) {
+    const allowList = []
+    if (allowList.indexOf(message.from) == -1) {
+      message.setReject("Address not allowed")
+    } else {
+      await message.forward("foo@bar.com")
+    }
+  }
+}
+```
+
+接受到 Email 后会触发 email 函数。
+
+传入 message 对象，里面包含了电子邮件的一些信息，其中有 `raw` 属性，这是电子邮件的原始字符串。
+
+通过 `postal-mime` 包，可以解析出电子邮件的信息：
+
+```js
+import PostalMime from 'postal-mime';
+
+// ...
+const emailInfo = await PostalMime.parse(message.raw)
+```
+
+
 ## 参考
 
 1. [CloudFlare Worker](https://developers.cloudflare.com/workers/)
