@@ -29,6 +29,7 @@ const homeSidebar = [
       { text: 'WSL', link: '/frontEnd/wsl'},
       { text: 'Bun', link: '/frontEnd/bun'},
       { text: 'CloudFlare', link: '/frontEnd/cloudflare' },
+      { text: 'Scoop', link: '/frontEnd/other/scoop' },
     ]
   },
   {
@@ -84,6 +85,7 @@ const frontEndSidebar = [
       { text: 'WSL', link: '/frontEnd/wsl'},
       { text: 'Bun', link: '/frontEnd/bun'},
       { text: 'CloudFlare', link: '/frontEnd/cloudflare' },
+      { text: 'Scoop', link: '/frontEnd/other/scoop' },
     ]
   },
   {
